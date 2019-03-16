@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <br><br><br><br>
+<div class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active">
+        Asistencia de Jornaleros
+    </button>
+    <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#exampleModal">Thelma Carrero Yáñez</button>
+
+    <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#exampleModal">Aidee Alonso Cavazos</button>
+
+    <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#exampleModal">Douglas E. Jenks</button>
+
+    <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#exampleModal">Ronnie K. Wynn</button>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Asignacion de Folio</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="container col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                <input type="text" class="form-control" placeholder="Folio Inicial" name="FolioInicial">
+                            </div>
+                            <br><br>
+                            <div class="container col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                <input type="text" class="form-control" placeholder="Folio Final" name="FolioFinal">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+    <br><br>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Agregar Nuevo Jornalero</button>
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Datos del Nuevo Jornalero</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="container col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <input type="text" class="form-control" placeholder="Nombre" name="text1">
+                        </div>
+                        <br><br>
+                        <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                            <input type="text" class="form-control" placeholder="Año" name="Año">
+
+                        </div>
+
+                        <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                            <input type="text" class="form-control" placeholder="Mes" name="Mes">
+
+                        </div>
+                        <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                            <input type="text" class="form-control" placeholder="Dia" name="dia">
+
+                        </div>
+
+                        <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                            <button type="submit" class="btn btn-primary">ok</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+</body>
+</html>
