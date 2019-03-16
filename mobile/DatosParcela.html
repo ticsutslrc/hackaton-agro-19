@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <title>DatosParcela</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./vendor/bootstrap.min.css">
+    <script src="./vendor/jquery-3.3.1.min.js"></script>
+    <script src="./vendor/bootstrap.min.js"></script>
+    <script src="./vendor/underscore.js"></script>
+    <script src="./vendor/backbone.js"></script>
+    <script src="./vendor/backbone.localStorage.js"></script>
 </head>
 <body>
 <div id="div1"></div>
@@ -14,28 +17,27 @@
     <br>
     <h2>Datos de parcela</h2>
     <br><br>
-    <form>
-        <div class="container" >
-        <div class="form-group">
-            <label for="inputsm">Numero de parcela<input class="form-control input-sm" id="inputsm" type="text"></label>
+    <form id="frmParcela">
 
-        </div>
         <div class="form-group">
-            <label for="inputsm">Producto <input class="form-control input-sm" id="inputsm" type="text"></label>
+            <label for="">Numero de parcela<input class="form-control input-sm" id="txtNumParcela"
+                                                         type="text"></label>
         </div>
-        </div>
-    </form>
-    <br><br>
-    <div class="container">
+        <!--<div class="form-group">-->
+            <!--<label for="">Referencia <input class="form-control input-sm" id="txtReferencia" type="text"></label>-->
+        <!--</div>-->
+
+        <br><br>
         <h4>Descripcion</h4>
-        <form>
-            <div class="form-group">
-                <textarea class="form-control" rows="5" id="comment"></textarea>
-            </div>
-        </form>
-    </div>
-    <button type="button" class="btn btn-primary">Aceptar</button>
+        <div class="form-group">
+            <textarea class="form-control" rows="5" id="txtDescripcion"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+    </form>
 </div>
+
 <script src="navbar.js"></script>
+<script src="./model/jornada.js"></script>
+<script src="DatosParcela.js"></script>
 </body>
 </html>

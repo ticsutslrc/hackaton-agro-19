@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <!--CDN´s BS-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
 
     <!-- amCharts javascript sources -->
-    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script type="text/javascript" src="vendor/amcharts.js"></script>
+    <script type="text/javascript" src="vendor/serial.js"></script>
 
 
     <!-- amCharts javascript code -->
@@ -67,31 +66,31 @@
                 "dataProvider": [
                     {
                         "date": "2014-03-01 08",
-                        "Cajas": 8
+                        "Cajas": 0
                     },
                     {
                         "date": "2014-03-01 09",
-                        "Cajas": 6
+                        "Cajas": 2
                     },
                     {
                         "date": "2014-03-01 10",
-                        "Cajas": 2
-                    },
-                    {
-                        "date": "2014-03-01 11",
-                        "Cajas": 1
-                    },
-                    {
-                        "date": "2014-03-01 12",
-                        "Cajas": 2
-                    },
-                    {
-                        "date": "2014-03-01 13",
                         "Cajas": 3
                     },
                     {
-                        "date": "2014-03-01 14",
+                        "date": "2014-03-01 11",
                         "Cajas": 6
+                    },
+                    {
+                        "date": "2014-03-01 12",
+                        "Cajas": 10
+                    },
+                    {
+                        "date": "2014-03-01 13",
+                        "Cajas": 12
+                    },
+                    {
+                        "date": "2014-03-01 14",
+                        "Cajas": 13
                     }
                 ]
             }
@@ -119,7 +118,7 @@
         <p>Contenedores: </p>
     </div>
     <div class="container col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <p>4</p>
+        <p>13</p>
     </div>
 </div>
 <div class="row">
@@ -127,7 +126,7 @@
         <p>Jornaleros: </p>
     </div>
     <div class="container col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <p>10</p>
+        <p>4</p>
     </div>
 </div>
 
@@ -144,10 +143,10 @@
             <div class="modal-body">
                 <p>Unidad de trabajo:</p>
                 <select class="form-control" id="selUnidadTrabajo">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
+                    <option>Unidad 1</option>
+                    <option>Unidad 2</option>
+                    <option>Unidad 3</option>
+                    <option>Unidad 4</option>
                 </select>
             </div>
             <div class="modal-footer">
