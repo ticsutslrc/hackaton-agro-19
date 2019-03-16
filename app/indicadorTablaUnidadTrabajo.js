@@ -12,7 +12,7 @@ $(function () {
                     title: "Referencia"
                 }, {
                     field: "cantidad",
-                    title: "#Cantidad"
+                    title: "Cantidad"
                 }, {
                     field: "unidad",
                     title: "Unidad",

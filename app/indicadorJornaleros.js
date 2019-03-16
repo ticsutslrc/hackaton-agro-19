@@ -1,7 +1,7 @@
 $(function () {
     $("#Table").bootstrapTable({
             classes: "table",
-            url:"http://localhost:86/hack/api/unitofwork",
+            url:"http://localhost:86/hack/api/journal/{id}/foreman",
             search:true,
             columns: [
                 {
