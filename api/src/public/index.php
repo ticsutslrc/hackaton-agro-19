@@ -24,11 +24,12 @@ $app->group("/hack/api", function () {
     $this->post("/unitofwork/{id}", "Hack\Controllers\UnitOfWork:Upd");
     $this->delete("/unitofwork/{id}", "Hack\Controllers\UnitOfWork:Del");
     $this->get("/unitofwork", "Hack\Controllers\UnitOfWork:GetAll");
+    $this->get("/unitofwork/{id}/journal", "Hack\Controllers\Journal:GetByUnitWork");
 
     $this->post("/journal", "Hack\Controllers\Journal:Add");
 
     $this->get("/supervisor", "Hack\Controllers\Supervisor:GetAll");
-    $this->add("/supervisor", "Hack\Controllers\Supervisor:Add");
+    $this->post("/supervisor", "Hack\Controllers\Supervisor:Add");
     $this->delete("/supervisor/{id}", "Hack\Controllers\Supervisor:Del");
 });
 
