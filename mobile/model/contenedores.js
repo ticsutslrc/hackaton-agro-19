@@ -1,6 +1,6 @@
 var ContenedoresModel = Backbone.Model.extend({
 
-    localStorageID: 'jornaleros',
+    localStorageID: 'contenedores',
 
     initialize: function (options) {
         var self = this;
