@@ -12,7 +12,7 @@ class Connection
     {
         $servername = "localhost";
         $username = "root";
-        $password = "";
+        $password = "12345";
         $database = "hackaton19";
 
         try {

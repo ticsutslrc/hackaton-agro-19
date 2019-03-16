@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>Nueva Unidad De Trabajo</title>
+
+</head>
+<body>
+<div class="container text-center ">
+    <br><br>
+    <h4>Nueva Unidad De Trabajo</h4>
+    <br><br>
+    <form id="newunidadtrabajo">
+        <div class="row">
+            <div class="container col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <label>Referencia</label>
+                <br>
+                <input type="text" class="form-control" placeholder="Referencia" name="referencia" id="txtreferencia">
+            </div>
+            <br><br>
+
+            <div class="container col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <label>Cantidad</label>
+                <input type="text" class="form-control" placeholder="Cantidad" name="cantidad" id="txtcantidad">
+            </div>
+
+            <br><br>
+
+            <div class="container">
+                <br><br>
+                <label for="sel1">Unidad</label>
+                <select class="form-control" id="sel1" name="sellist1">
+                    <option>Cajas</option>
+                    <option>palles</option>
+
+                </select>
+            </div>
+        </div>
+
+        <br><br>
+        <div class="container text-center">
+
+
+            <div class="row">
+                <div class="container col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <label>Incio</label>
+                    <input type="date" class="form-control" placeholder="inicio" name="" id="txtinicio">
+                </div>
+
+                <div class="container col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <label>Final</label>
+                    <input type="date" class="form-control" placeholder="final" name="" id="txtfinal">
+                </div>
+                <br><br>
+                <div class="container text-center">
+                    <br><br>
+
+                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="unidadtrabajo.js"></script>
+</body>
+</html>
