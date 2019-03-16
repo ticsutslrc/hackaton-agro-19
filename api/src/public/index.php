@@ -5,6 +5,7 @@ date_default_timezone_set('America/Phoenix');
 require __DIR__ . '/../../vendor/autoload.php';
 require __DIR__ . '/../Connection.php';
 require __DIR__ . '/../controllers/UnitOfWork.php';
+require __DIR__ . '/../controllers/Journal.php';
 
 $app = new Slim\App([
     'settings' => [
@@ -21,6 +22,8 @@ $app->group("/hack/api", function () {
     $this->post("/unitofwork", "Hack\Controllers\UnitOfWork:Add");
     $this->post("/unitofwork/{id}", "Hack\Controllers\UnitOfWork:Upd");
     $this->delete("/unitofwork/{id}", "Hack\Controllers\UnitOfWork:Del");
+
+    $this->post("/journal", "Hack\Controllers\Journal:Add");
 });
 
 $app->add(function ($req, $res, $next) {

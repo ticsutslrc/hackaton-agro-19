@@ -1,5 +1,6 @@
 {
-    "require": {
-        "slim/slim": "^3.0"
-    }
+  "require": {
+    "ext-json": "*",
+    "slim/slim": "^3.0"
+  }
 }
