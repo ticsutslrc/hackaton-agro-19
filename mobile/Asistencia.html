@@ -9,12 +9,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div id="div1"></div>
 <div class="container">
-    <br><br><br><br>
+
 <div class="list-group">
-    <button type="button" class="list-group-item list-group-item-action active">
-        Asistencia de Jornaleros
-    </button>
+    <div class="container text-center">
+        <h2>Asistencia de Jornaleros</h2>
+    </div>
     <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#exampleModal">Thelma Carrero Yáñez</button>
 
     <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#exampleModal">Aidee Alonso Cavazos</button>
@@ -55,7 +56,10 @@
         </div>
         <!-- Modal -->
     <br><br>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Agregar Nuevo Jornalero</button>
+    <div class="container text-center">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Agregar Nuevo Jornalero</button>
+    </div>
+
 
     <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -67,27 +71,25 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="container text-center">
+                        <input type="text" class="form-control" placeholder="Nombre" name="text1">
+                    </div>
+                    <div class="container text-center">
+                        <p>Fecha de nacimiento</p>
+                    </div>
                     <div class="row">
-                        <div class="container col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <input type="text" class="form-control" placeholder="Nombre" name="text1">
-                        </div>
-                        <br><br>
-                        <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+
+                        <div class="container col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
                             <input type="text" class="form-control" placeholder="Año" name="Año">
 
                         </div>
 
-                        <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                        <div class="container col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
                             <input type="text" class="form-control" placeholder="Mes" name="Mes">
 
                         </div>
-                        <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                        <div class="container col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
                             <input type="text" class="form-control" placeholder="Dia" name="dia">
-
-                        </div>
-
-                        <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
-                            <button type="submit" class="btn btn-primary">ok</button>
 
                         </div>
 
@@ -106,6 +108,6 @@
 
 </div>
 </div>
-
+<script src="navbar.js"></script>
 </body>
 </html>
