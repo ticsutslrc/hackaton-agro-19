@@ -25,6 +25,10 @@ $app->group("/hack/api", function () {
     $this->get("/unitofwork", "Hack\Controllers\UnitOfWork:GetAll");
 
     $this->post("/journal", "Hack\Controllers\Journal:Add");
+
+    $this->get("/supervisor", "Hack\Controllers\Supervisor:GetAll");
+    $this->add("/supervisor", "Hack\Controllers\Supervisor:Add");
+    $this->delete("/supervisor/{id}", "Hack\Controllers\Supervisor:Del");
 });
 
 $app->add(function ($req, $res, $next) {
