@@ -67,7 +67,7 @@ class Journal
 
     public function GetByUnitWork(Request $req, Response $resp, array $args)
     {
-        $conn = \Connection::get();
+        $conn = \Connection::get();  $id = $args['id'];
         $search = $req->getQueryParam('search');
         $limit = $req->getQueryParam('limit', 20);
         $offset = $req->getQueryParam('offset', 0);
@@ -79,11 +79,11 @@ class Journal
             $stmt = $conn->query("SELECT j.id idjornada,j.referencia,j.descripcion,j.inicio,j.final,j.creada 
             FROM unidad_trabajo ut
             INNER JOIN unidadtrabajo_jornadas utj ON utj.idunidadtrabajo=ut.id
-            INNER JOIN jornadas j ON j.id=utj.idjornadas  WHERE 1=1 " . $filter . $pagination);
+            INNER JOIN jornadas j ON j.id=utj.idjornadas  WHERE ut.id = $id and 1=1 " . $filter . $pagination);
             $rows = $stmt->fetchAll();
             $stmt = $conn->query("SELECT COUNT(*)count FROM unidad_trabajo ut
             INNER JOIN unidadtrabajo_jornadas utj ON utj.idunidadtrabajo=ut.id
-            INNER JOIN jornadas j ON j.id=utj.idjornadas  WHERE 1=1 " . $filter);
+            INNER JOIN jornadas j ON j.id=utj.idjornadas  WHERE ut.id = $id and 1=1 " . $filter);
             $row = $stmt->fetch();
         } catch (\Exception $e) {
             return $resp->withJson($e->getMessage(), 500);
