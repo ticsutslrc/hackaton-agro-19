@@ -15,7 +15,7 @@ $(function () {
 
     $("#Table").bootstrapTable({
             classes: "table",
-            url:"http://localhost:86/hack/api/unitofwork/"+unidad+"/journal",
+            url:"http://192.168.43.89:5460/hack/api/unitofwork/"+unidad+"/journal",
             search:true,
             columns: [
                 {

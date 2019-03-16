@@ -13,7 +13,7 @@ $(function () {
 
     $("#Table").bootstrapTable({
             classes: "table",
-            url:"http://localhost:86/hack/api/journal/"+unidad+"/foreman",
+            url:"http://192.168.43.89:5460/hack/api/journal/"+unidad+"/foreman",
             search:true,
             columns: [
                 {

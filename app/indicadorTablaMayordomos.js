@@ -1,7 +1,7 @@
 $(function () {
     $("#Table").bootstrapTable({
             classes: "table",
-            url:"http://localhost:86/hack/api/supervisor",
+            url:"http://192.168.43.89:5460/hack/api/supervisor",
             search:true,
             columns: [
                 {
