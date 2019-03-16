@@ -91,4 +91,24 @@ class Journal
         return $resp->withJson(["rows" => $rows, 'total' => $row->count], 200);
     }
 
+    public function GetByJornada(Request $req, Response $resp, array $args)
+    {
+        $conn = \Connection::get();
+        $search = $req->getQueryParam('search');
+        $limit = $req->getQueryParam('limit', 20);
+        $offset = $req->getQueryParam('offset', 0);
+
+        $filter = "";
+        $pagination = " LIMIT $limit OFFSET $offset";
+        if ($search) $filter .= " AND nombre LIKE '%$search%' ";
+        try {
+            $stmt = $conn->query("select * from jornaleros j inner join jornadas_jornaleros jj on j.id = jj.idjornalero WHERE 1=1 " . $filter . $pagination);
+            $rows = $stmt->fetchAll();
+            $stmt = $conn->query("select count(*)count from jornaleros j inner join jornadas_jornaleros jj on j.id = jj.idjornalero;  WHERE 1=1 " . $filter);
+            $row = $stmt->fetch();
+        } catch (\Exception $e) {
+            return $resp->withJson($e->getMessage(), 500);
+        }
+        return $resp->withJson(["rows" => $rows, 'total' => $row->count], 200);
+    }
 }

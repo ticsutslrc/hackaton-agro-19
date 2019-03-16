@@ -27,6 +27,7 @@ $app->group("/hack/api", function () {
     $this->get("/unitofwork/{id}/journal", "Hack\Controllers\Journal:GetByUnitWork");
 
     $this->post("/journal", "Hack\Controllers\Journal:Add");
+    $this->get("/journal/{id}/foreman", "Hack\Controllers\Journal:GetByJornada");
 
     $this->get("/supervisor", "Hack\Controllers\Supervisor:GetAll");
     $this->post("/supervisor", "Hack\Controllers\Supervisor:Add");
