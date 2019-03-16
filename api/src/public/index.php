@@ -22,6 +22,7 @@ $app->group("/hack/api", function () {
     $this->post("/unitofwork", "Hack\Controllers\UnitOfWork:Add");
     $this->post("/unitofwork/{id}", "Hack\Controllers\UnitOfWork:Upd");
     $this->delete("/unitofwork/{id}", "Hack\Controllers\UnitOfWork:Del");
+    $this->get("/unitofwork", "Hack\Controllers\UnitOfWork:GetAll");
 
     $this->post("/journal", "Hack\Controllers\Journal:Add");
 });

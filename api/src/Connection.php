@@ -12,7 +12,7 @@ class Connection
     {
         $servername = "localhost";
         $username = "root";
-        $password = "12345";
+        $password = "";
         $database = "hackaton19";
 
         try {
@@ -21,9 +21,9 @@ class Connection
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         } catch (PDOException $e) {
-            new Exception("Connection failed: " . $e->getMessage());
+            throw new Exception("Connection failed: " . $e->getMessage());
         }
-        if (!$conn) new Exception("Connection failed");
+        if (!$conn) throw new Exception("Connection failed");
         return $conn;
     }
 }

@@ -73,4 +73,25 @@ class UnitOfWork
         }
         return $resp->withJson(["msg" => $id]);
     }
+
+    public function GetAll(Request $req, Response $resp, array $args)
+    {
+        $conn = \Connection::get();
+        $search = $req->getQueryParam('search');
+        $limit = $req->getQueryParam('limit', 20);
+        $offset = $req->getQueryParam('offset', 0);
+
+        $filter = "";
+        $pagination = " LIMIT $limit OFFSET $offset";
+        if ($search) $filter .= " AND referencia LIKE '%$search%' ";
+        try {
+            $stmt = $conn->query("SELECT * FROM unidad_trabajo WHERE 1=1 " . $filter . $pagination);
+            $rows = $stmt->fetchAll();
+            $stmt = $conn->query("SELECT COUNT(*)count FROM unidad_trabajo WHERE 1=1 " . $filter);
+            $row = $stmt->fetch();
+        } catch (\Exception $e) {
+            return $resp->withJson($e->getMessage(), 500);
+        }
+        return $resp->withJson(["rows" => $rows, 'total' => $row->count], 200);
+    }
 }
