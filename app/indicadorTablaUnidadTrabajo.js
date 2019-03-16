@@ -9,7 +9,10 @@ $(function () {
                     title: "ID"
                 }, {
                     field: "referencia",
-                    title: "Referencia"
+                    title: "Referencia",
+                    formatter: function(val, row){
+                        return "<a href='./indicadorJournal.html?unidad="+row["id"]+"'>"+val+"</a>"
+                    }
                 }, {
                     field: "cantidad",
                     title: "Cantidad"
