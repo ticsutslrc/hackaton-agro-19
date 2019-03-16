@@ -1,2 +1,4 @@
 .idea
 !.keep
+api/vendor
+api/composer.lock
