@@ -6,6 +6,7 @@ require __DIR__ . '/../../vendor/autoload.php';
 require __DIR__ . '/../Connection.php';
 require __DIR__ . '/../controllers/UnitOfWork.php';
 require __DIR__ . '/../controllers/Journal.php';
+require __DIR__ . '/../controllers/Supervisor.php';
 
 $app = new Slim\App([
     'settings' => [
